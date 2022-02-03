@@ -22,20 +22,34 @@ In the second iteration, we can see that lcm = 36 and is now perfectly divisible
 
 # All work should be done in this method, the header is provided for you.
 # Reminder: "a" and "b" from the method are variables you can access in the code.
+
 def lcm(a, b):
-    print("holding place")
+   if a > b:
+       greater = a
+   elif a < b:
+       greater = b
+   else:
+       print("the numbers are the same")
+
+   while(True):
+       if((greater % a == 0) and (greater % b == 0)):
+           lcm = greater
+           break
+       greater += 1
+
+   return lcm
+
+num1 = 12
+num2 = 48
 
 
-
-
-
-
+print("The least commom multible is", lcm(num1, num2))
 
 
 
 
 ###############################################################################
 # Do all work above here.  Lines below are to help test the program.
-print("LCM of 12 and 48: " + lcm(12, 48))
-print("LCM of 100 and 3: " + lcm(100, 3))
-print("LCM of -8 and 14: " + lcm(-8, 14))
+lcm(12, 48)
+lcm(100, 3)
+lcm(-8, 14)
